@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>By Example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/style.css" media="screen">
+    </head>
+    <body>
+    <form action="/index" id="outerAddEditExampleContainer", method="POST">
+        <button class="outerAddEditExampleContainerButtons" id="write">Write</button>
+        <button class="outerAddEditExampleContainerButtons" id="preview">Preview</button>
+        <input id="title" name="title" placeholder="Title" type="text">
+        <button type="submit">Submit</button><br>
+        <div id="rowed_input_field"></div>
+        <textarea id="AddEditExampleTextContainer" name="text" placeholder="alksjdfsdf" type="text"></textarea>
+
+    </form>
+    
+    {% for example in examples %}
+    <h1>Example Title : {{example[0]}}</h1>
+    <p class="show-white-space">Description : {{example[1]}}
+    <hr>
+    {% endfor %}
+
+    </body>
+    <script src="../static/script.js" charset="utf-8"></script>
+</html>
